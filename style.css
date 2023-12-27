@@ -144,7 +144,7 @@ html {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 70%;
+  height: 80%;
 }
 
 .customer {
@@ -229,7 +229,22 @@ html {
   padding: 1rem 1rem 2rem 1rem;
   box-shadow: 1rem 1rem 2rem #ddd, -1rem -1rem 2rem #eee;
   position: relative;
+  opacity: .7;
+  transition: opacity 0.5s;
 }
+
+.team-member:hover{
+  opacity: 1;
+}
+
+.team-member:first-child{
+  align-self: flex-start;
+}
+
+.team-member:last-child{
+  align-self: flex-end;
+}
+
 
 .story{
   width: 100%;
@@ -244,6 +259,14 @@ html {
   align-items: center;
   padding: 2rem;
   transform: scale(0);
+  transform-origin: top right ;
+  border-radius: 50rem 0rem 50rem 50rem;
+  transition: all 0.5s;
+}
+
+.change.story{
+  transform: scale(1);
+  border-radius: 0;
 }
 
 .story-heading{
@@ -279,7 +302,7 @@ html {
 .team-member-skills{
   display: flex;
   justify-content: space-between;
-  margin: 1rem 2rem 0;
+  margin: 1rem 0rem 2rem 0rem;
   
 }
 
@@ -292,7 +315,7 @@ html {
   background-color: #fab34a;
   color: #fff;
   padding: 0.5rem 1.5rem;
-  border-radius: 4rem;
+  border-radius: 5rem;
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   
@@ -307,9 +330,14 @@ html {
   border-radius: 5rem;
   display: flex;
   align-items: center;
-  padding: 0.5re;
+  padding: 0.5rem;
   cursor: pointer;
   z-index: 50;
+  transition: tranform 0.5s;
+}
+
+.change.story-btn{
+  transform:rotate(495deg);
 }
 
 .story-btn-line{
